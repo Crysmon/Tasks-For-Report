@@ -6,14 +6,14 @@ import java.util.*;
 
 public class Main
 {
-    public static Double MaxiMOM(ArrayList<Double> list)
+    public static double MiniMOM(ArrayList<Double> list)
     {
-        double max = list.get(0);
-        for (double i: list) {
-            if(i > max)
-                max = i;
+        double min = list.get(0);
+        for (double i : list) {
+            if (i < min)
+                min = i;
         }
-        return max;
+        return min;
     }
     public static void main(String[] args)
     {
@@ -30,6 +30,6 @@ public class Main
             nums[i] = m;
         }
         ArrayList<Double> list = new ArrayList<Double>(Arrays.asList(nums));
-        System.out.println("Максимальное число: " + MaxiMOM(list));
+        System.out.println("Минимальное число: " + MiniMOM(list));
     }
 }
